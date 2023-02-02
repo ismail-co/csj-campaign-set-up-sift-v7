@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Create a job advert – Civil service jobs – GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'Your <a href"">feedback</a> will help us to improve.'
+})}}
+<ul class="js-signout" id="navigation">
+  <li class="content">
+    <li class="content">user@cabinetoffice.gov.uk</li>
+    <li class="content">
+    <a href="/search">Home</a>
+    </li>
+    <li class="content">
+      <a href="">Save and sign out</a>
+      </li>
+      <li class="content">
+        <a href="">Cymraeg</a>
+        </li>
+        </ul>
+        {{ govukBackLink({
+          text: "Back",
+          href: "pre-sift-questions"
+        }) }}
+        {% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Campaign submitted for approval</h1>
+        <div class="govuk-panel__body">
+          Job id<strong> (1001334)</strong>
+        </div>
+      </div>
+
+
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>We've sent your campaign details to the Government Recruitment Service to perform an audit for compliance with the Civil Service Commission's principles.</p>
+      <p>They will contact you either to confirm your campaign launch, or to ask for more information.</p>
+
+      <p>
+        We have sent you a email to confirm these details.
+      </p>
+    </div>
+  </div>
