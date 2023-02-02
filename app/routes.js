@@ -115,39 +115,49 @@ router.get('/campaign-set-up/job-library-profession-2', function (req, res) {
         jobTitle: jobTitle
       })
     })
-    router.post('/campaign-set-up/reserves-found', function (req, res) {
-      var reserve = req.session.data['reserve']
+    // router.post('/campaign-set-up/reserves-found', function (req, res) {
+    //   var reserve = req.session.data['reserve']
+    //
+    //   switch (reserve) {
+    //     case 'yes':
+    //     res.redirect('reserve-candidates')
+    //     break
+    //   case 'no':
+    //     res.redirect('vacancy-management')
+    //     break
+    //   }
+    //   })
 
-      switch (reserve) {
-        case 'yes':
-        res.redirect('reserve-candidates')
-        break
-      case 'no':
-        res.redirect('task-list')
-        break
-      }
-      })
+      // router.get('/reserves-found-1', function (req, res) {
+      //   var level = level
+      //   var jobTitle = jobTitle
+      //     res.render('reserves-found-1', {
+      //       level: level,
+      //       jobTitle: jobTitle
+      //     })
+      //   })
+      //   router.post('/campaign-set-up/reserves-found-1', function (req, res) {
+      //     var reserve = req.session.data['reserve']
+      //
+      //     switch (reserve) {
+      //       case 'yes':
+      //       res.redirect('reserve-candidates')
+      //       break
+      //     case 'no':
+      //       res.redirect('vacancy-management')
+      //       break
+      //     }
+      //     })
 
-      router.get('/reserves-found-1', function (req, res) {
-        var level = level
-        var jobTitle = jobTitle
-          res.render('reserves-found-1', {
-            level: level,
-            jobTitle: jobTitle
-          })
-        })
-        router.post('/campaign-set-up/reserves-found-1', function (req, res) {
-          var reserve = req.session.data['reserve']
 
-          switch (reserve) {
-            case 'yes':
-            res.redirect('reserve-candidates')
-            break
-          case 'no':
-            res.redirect('vacancy-management')
-            break
-          }
-          })
+router.get('/fixit', function (req, res){
+  if (req.session.data['reserve'] == "yes") {
+    res.redirect('/campaign-set-up/reserve-candidates')
+} else {
+    res.redirect('/campaign-set-up/vacancy-management')
+}
+
+})
 
       // Task list
 
