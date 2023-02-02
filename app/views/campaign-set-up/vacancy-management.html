@@ -34,7 +34,6 @@
   <div class="govuk-grid-column-two-thirds">
 <span class="govuk-caption-l">Review and manage</span>
     <h1 class="govuk-heading-l">Vacancy management</h1>
-    <form action="confirmation" method="post">
     {{ govukRadios({
       idPrefix: "advert-time",
       name: "advert-time",
@@ -106,8 +105,8 @@
 
 {{ govukButton({
   text: "Submit campaign"
-      }) }}
-      </form>
+      href: "confirmation"
+}) }}
 <p><a href="/campaign-set-up/task-list">Save and return to task-list</a></p>
 
 </div>
